@@ -18,17 +18,22 @@ const Header = () => {
       <li>
         <Link to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/dashboard">Dashboard</Link>
-      </li>
+
       <li>
         <Link to="/about">About</Link>
       </li>
       {user?.uid ? (
         <>
-          {/* <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li> */}
+          <li>
+            <Link to="/inventories/manage">Manage Items</Link>
+          </li>
+          <li>
+            <Link to="/inventories/add">Add Items</Link>
+          </li>
+          <li>
+            <Link to="/inventories/my">My Items</Link>
+          </li>
+
           <li>
             <button
               className="hover:bg-red-500 hover:text-white border border-red-500 py-1 px-5 rounded-md duration-200 ease-in-out text-red-500"

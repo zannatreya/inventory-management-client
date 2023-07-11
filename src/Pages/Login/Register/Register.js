@@ -37,7 +37,7 @@ const Register = () => {
         };
         updateUser(userInfo)
           .then(() => {
-            saveUser(data.name, data.email);
+            // saveUser(data.name, data.email);
           })
           .catch((err) => console.log(err));
       })
@@ -47,20 +47,20 @@ const Register = () => {
       });
   };
 
-  const saveUser = (name, email) => {
-    const user = { name, email };
-    fetch(" https://car-parts-server-six.vercel.app/user", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setCreatedUserEmail(email);
-      });
-  };
+  // const saveUser = (name, email) => {
+  //   const user = { name, email };
+  //   fetch(" https://car-parts-server-six.vercel.app/user", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(user),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCreatedUserEmail(email);
+  //     });
+  // };
 
   return (
     <div className="h-[800px] bg-slate-800 flex justify-center items-center mt-0">

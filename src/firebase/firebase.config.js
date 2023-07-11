@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBemNfr8AaCfy2VC--tO7DoN-UQwAWooFY",
-  authDomain: "doctors-portal-60216.firebaseapp.com",
-  projectId: "doctors-portal-60216",
-  storageBucket: "doctors-portal-60216.appspot.com",
-  messagingSenderId: "427888635902",
-  appId: "1:427888635902:web:a919fd509e1510a907daaf",
+  apiKey: "AIzaSyAk7A2hRoWs9gh10AWHGfrwXyBdWFuiC-w",
+  authDomain: "inventory-management-b5c59.firebaseapp.com",
+  projectId: "inventory-management-b5c59",
+  storageBucket: "inventory-management-b5c59.appspot.com",
+  messagingSenderId: "936212871726",
+  appId: "1:936212871726:web:da460276f25744e548fdbf",
 };
 
 // Initialize Firebase

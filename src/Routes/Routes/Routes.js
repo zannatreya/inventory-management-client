@@ -12,15 +12,19 @@ import Home from "../../Pages/Home/Home/Home";
 // import AddDoctor from "../../Pages/Dashboard/AddDoctor/AddDoctor";
 // import ManageDoctor from "../../Pages/Dashboard/ManageDoctor/ManageDoctor";
 // import Payment from "../../Pages/Dashboard/Payment/Payment";
-// import DisplayError from "../../Pages/Shared/DisplayError/DisplayError";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import DisplayError from "../../Pages/Shared/DisplayError/DisplayError";
+import AddItems from "../../Pages/AddItems/AddItems";
+import MyItems from "../../Pages/MyItems/MyItems";
+import ManageItems from "../../Pages/ManageItems/ManageItems";
+import UpdateItems from "../../UpdateItems/UpdateItems";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    // errorElement: <DisplayError></DisplayError>,
+    errorElement: <DisplayError></DisplayError>,
 
     children: [
       {
@@ -35,54 +39,23 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <Register></Register>,
       },
+      {
+        path: "/inventories/add",
+        element: <AddItems></AddItems>,
+      },
+      {
+        path: "/inventories/my",
+        element: <MyItems></MyItems>,
+      },
+      {
+        path: "/inventories/manage",
+        element: <ManageItems></ManageItems>,
+      },
+      {
+        path: "/inventories/:id",
+        element: <UpdateItems></UpdateItems>,
+      },
     ],
   },
-  // {
-  //   path: "/dashboard",
-  //   element: (
-  //     <PrivateRoute>
-  //       <DashboardLayout></DashboardLayout>
-  //     </PrivateRoute>
-  //   ),
-  //   errorElement: <DisplayError></DisplayError>,
-  //   children: [
-  //     {
-  //       path: "/dashboard",
-  //       element: <MyAppointment></MyAppointment>,
-  //     },
-  //     {
-  //       path: "/dashboard/allusers",
-  //       element: (
-  //         <AdminRoute>
-  //           <AllUsers></AllUsers>
-  //         </AdminRoute>
-  //       ),
-  //     },
-  //     {
-  //       path: "/dashboard/adddoctor",
-  //       element: (
-  //         <AdminRoute>
-  //           <AddDoctor></AddDoctor>
-  //         </AdminRoute>
-  //       ),
-  //     },
-  //     {
-  //       path: "/dashboard/managedoctor",
-  //       element: (
-  //         <AdminRoute>
-  //           <ManageDoctor></ManageDoctor>
-  //         </AdminRoute>
-  //       ),
-  //     },
-  //     {
-  //       path: "/dashboard/payment/:id",
-  //       element: <Payment></Payment>,
-  //       loader: ({ params }) =>
-  //         fetch(
-  //           `https://doctors-portal-server-silk-tau.vercel.app/bookings/${params.id}`
-  //         ),
-  //     },
-  //   ],
-  // },
 ]);
 export default router;

@@ -55,7 +55,7 @@ const Login = () => {
               {...register("email", {
                 required: "Email Address is required",
               })}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs text-black"
             />
             {errors.email && (
               <p className="text-red-600">{errors.email?.message}</p>
@@ -74,7 +74,7 @@ const Login = () => {
                   message: "Password must be 6 characters or longer",
                 },
               })}
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs text-black"
             />
             {errors.password && (
               <p className="text-red-600">{errors.password?.message}</p>
